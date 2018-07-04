@@ -35,6 +35,7 @@ class Dokter extends CI_Controller {
         $nama_ibu       = $this->input->post('nama_ibu');
         $alamat         = $this->input->post('alamat');
         $agama          = $this->input->post('agama');
+        $no_bpjs        = $this->input->post('no_bpjs');
         $telpon         = $this->input->post('telpon');
         $pekerjaan      = $this->input->post('pekerjaan');
         $status_menikah = $this->input->post('status_menikah');
@@ -48,6 +49,7 @@ class Dokter extends CI_Controller {
                     'nama_ibu'        => $nama_ibu,
                     'alamat'          => $alamat,
                     'agama'           => $agama,
+                    'no_bpjs'         => $no_bpjs,
                     'telpon'          => $telpon,
                     'pekerjaan'       => $pekerjaan,
                     'status_menikah'  => $status_menikah
@@ -69,11 +71,13 @@ class Dokter extends CI_Controller {
     }
 
     function edit_data_pasien($id){
+        $where = array('id' => $id);
         $this->load->view('admin/header');
-        $data['pasien'] = $this->m_dokter->tampil_data('pasien');
+        $data['pasien'] = $this->m_dokter->edit_data($where,'pasien')->result();
         $this->load->view('dokter/edit_datapasien',$data);
         $this->load->view('dokter/footer');
     }
+
 
     function update_data_pasien(){
         $id             = $this->input->post('id');
@@ -86,6 +90,7 @@ class Dokter extends CI_Controller {
         $nama_ibu       = $this->input->post('nama_ibu');
         $alamat         = $this->input->post('alamat');
         $agama          = $this->input->post('agama');
+        $no_bpjs        = $this->input->post('no_bpjs');
         $telpon         = $this->input->post('telpon');
         $pekerjaan      = $this->input->post('pekerjaan');
         $status_menikah = $this->input->post('status_menikah');
@@ -100,6 +105,7 @@ class Dokter extends CI_Controller {
                     'nama_ibu'        => $nama_ibu,
                     'alamat'          => $alamat,
                     'agama'           => $agama,
+                    'no_bpjs'         => $no_bpjs,
                     'telpon'          => $telpon,
                     'pekerjaan'       => $pekerjaan,
                     'status_menikah'  => $status_menikah
@@ -110,6 +116,13 @@ class Dokter extends CI_Controller {
 
         $this->m_dokter->update_data($where,$data,'pasien');
         redirect('Dokter/tampil_pasien');
+    }
+
+     function tampil_rekamedis(){
+        $this->load->view('dokter/header');
+        $data['pasien']=$this->m_dokter->tampil_data('pasien');
+        $this->load->view('dokter/v_rekamedis',$data);
+        $this->load->view('dokter/footer');
     }
 }
 ?>

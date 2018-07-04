@@ -53,7 +53,9 @@
               <div class="menu_section">
                 <h3>MENU UTAMA</h3>
                 <ul class="nav side-menu">
-                  <li ><a href="<?php echo base_url()."index.php/admin/Beranda"?>"><i class="fa fa-home"></i>Data Pasien</span></a>
+                  <li ><a href="<?php echo base_url()."index.php/Dokter/tampil_pasien"?>"><i class="fa fa-edit"></i>Data Pasien</span></a>
+                  </li>
+                  <li ><a href="<?php echo base_url()."index.php/Dokter/tampil_rekamedis"?>"><i class="fa fa-edit"></i>Data Rekam Medis</span></a>
                   </li>
                 </ul>  
               </div>

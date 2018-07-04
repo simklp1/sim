@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Inang: 127.0.0.1
--- Waktu pembuatan: 04 Jul 2018 pada 06.38
+-- Waktu pembuatan: 04 Jul 2018 pada 08.46
 -- Versi Server: 5.5.27
 -- Versi PHP: 5.4.7
 
@@ -135,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `hak_akses` varchar(50) NOT NULL,
   `date_created` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data untuk tabel `login`
@@ -143,9 +143,10 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`id`, `username`, `password`, `nama`, `foto`, `hak_akses`, `date_created`) VALUES
 (1, 'irsyad', '123', 'Hussain Irsyad', 'foto.jpg', 'admin', '2018-05-09 09:11:00'),
-(2, 'icca', '123', 'Hussain Irsyad', 'foto2.jpg', 'dokter', '2018-05-09 09:34:10'),
+(2, 'arham', '123', 'Arham Affandi', 'foto2.jpg', 'dokter', '2018-05-09 09:34:10'),
 (3, 'ahmad', '123', 'Ahmad Muhtadin', 'foto3.jpg', 'staff', '2018-05-07 05:23:03'),
-(4, 'majid', '123', 'Abd. Majid', 'foto4.jpg', 'keuangan', '2018-05-02 11:38:43');
+(4, 'majid', '123', 'Abd. Majid', 'foto4.jpg', 'keuangan', '2018-05-02 11:38:43'),
+(5, 'ardi', '123', 'Ardiansyah', 'foto5.jpg', 'dokter', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -185,6 +186,7 @@ CREATE TABLE IF NOT EXISTS `pasien` (
   `nama_ibu` varchar(50) NOT NULL,
   `alamat` varchar(50) NOT NULL,
   `agama` varchar(50) NOT NULL,
+  `no_bpjs` varchar(50) NOT NULL,
   `telpon` varchar(20) NOT NULL,
   `pekerjaan` varchar(50) NOT NULL,
   `status_menikah` varchar(50) NOT NULL,
@@ -195,9 +197,9 @@ CREATE TABLE IF NOT EXISTS `pasien` (
 -- Dumping data untuk tabel `pasien`
 --
 
-INSERT INTO `pasien` (`id`, `no_rekamedis`, `nama_pasien`, `jk`, `goldar`, `tempat_lahir`, `tanggal_lahir`, `nama_ibu`, `alamat`, `agama`, `telpon`, `pekerjaan`, `status_menikah`) VALUES
-(2, '90118273654', 'Irsyad', 'Laki-Laki', 'B', 'Makassar', '1997-07-26', 'Rosniah', 'Katangka', 'Islam', '08999026825', 'PNS', 'Belum Menikah'),
-(4, '90118273654', 'Irsyad', 'Laki-Laki', 'A', 'Makassar', '3333-03-31', 'Rosniah', 'Katangka', 'Kristen Protestan', '08999026825', 'PNS', 'Menikah');
+INSERT INTO `pasien` (`id`, `no_rekamedis`, `nama_pasien`, `jk`, `goldar`, `tempat_lahir`, `tanggal_lahir`, `nama_ibu`, `alamat`, `agama`, `no_bpjs`, `telpon`, `pekerjaan`, `status_menikah`) VALUES
+(2, '90118273654', 'Irsyad', 'Laki-Laki', 'B', 'Makassar', '1997-07-26', 'Rosniah', 'Katangka', 'Islam', '909090990', '08999026825', 'PNS', 'Belum Menikah'),
+(4, '90118273654', 'Irsyad', 'Laki-Laki', 'A', 'Makassar', '3333-03-31', 'Rosniah', 'Katangka', 'Kristen Protestan', '6060606060', '08999026825', 'PNS', 'Menikah');
 
 -- --------------------------------------------------------
 

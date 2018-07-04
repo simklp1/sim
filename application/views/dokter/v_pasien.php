@@ -26,6 +26,7 @@
                             <th width="250">Nama Ibu</th>
                             <th width="300">Alamat</th>
                             <th width="100">Agama</th>
+                            <th width="100">Nomor BPJS</th>
                             <th width="150">Nomor Telpon</th>
                             <th width="300">Pekerjaan</th>
                             <th width="300">Status Menikah</th>
@@ -48,13 +49,14 @@
                             <td><?php echo $p->nama_ibu ?></td>
                             <td><?php echo $p->alamat ?></td>
                             <td><?php echo $p->agama ?></td>
+                            <td><?php echo $p->no_bpjs ?></td>
                             <td><?php echo $p->telpon ?></td>
                             <td><?php echo $p->pekerjaan ?></td>
                             <td><?php echo $p->status_menikah ?></td>
                             <td>
                                       <a type="button" class="btn btn-danger" href="<?php echo base_url()."index.php/Dokter/hapus_data_pasien/".$p->id ?>"><i class="fa fa-trash-o"></i></a>
                                       <a type="button" class="btn btn-primary" href="<?php echo base_url()."index.php/Dokter/edit_data_pasien/".$p->id ?>"><i class="fa fa-pencil"></i></a>
-                                    </td>
+                            </td>
                           </tr>
                         <?php } ?>
                         </tbody>
