@@ -29,8 +29,8 @@ class Login extends CI_Controller {
                 'password'      => $password,
                 'hak_akses'     => $hak_akses,
                 'status'        => "login",
-                'nama'          => $nama,
-                'foto'          => $foto,
+                'nama'          => $row->nama,
+                'foto'          => $row->foto,
 
             );
 
@@ -43,9 +43,9 @@ class Login extends CI_Controller {
                 else if ($a->hak_akses == 'dokter')
                     redirect('Dokter/tampil_pasien');
                 else if ($a->hak_akses == 'staff')
-                    redirect('c_staff/index');
+                    redirect('Staff/tampil_kategori');
                 else
-                    redirect('c_keuangan/index');
+                    redirect('Keuangan/tampil_pegawai');
             }
 
         else

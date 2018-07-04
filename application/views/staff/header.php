@@ -36,7 +36,7 @@
         <div class="col-md-3 left_col"  >
           <div class="left_col scroll-view" style="background: #007ed7 ">
             <div class="navbar nav_title" style="border: 0; background: #ededed">
-              <a href="index.html" class="site_title"><img style="width: 35px" src="<?php echo base_url()?>assets/admin/build/images/logo.png"></i> <span style="color: #007ed7">          SIM RS</span></a>
+              <a href="index.html" class="site_title"><img style="width: 35px" src="<?php echo base_url()?>assets/admin/build/images/logo.png"></i><span style="color: #007ed7">          SIM RS</span></a>
             </div>
             <div class="clearfix"></div>
             <div class="profile clearfix">
@@ -53,17 +53,12 @@
               <div class="menu_section">
                 <h3>MENU UTAMA</h3>
                 <ul class="nav side-menu">
-                  <li ><a href="<?php echo base_url()."index.php/admin/tampil_pasien"?>"><i class="fa fa-home"></i>Data Pasien</span></a>
-                  </li>
-                  <li><a><i class="fa fa-edit"></i>Master data<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i>Aset dan Inventory<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?=base_url('index.php/Admin/tampil_jenjang'); ?>">Data Jenjang</a></li>
-                      <li><a href="<?=base_url('index.php/admin/tampil_jabatan'); ?>">Data Jabatan</a></li>
-                      <li><a href="<?=base_url('index.php/admin/tampil_poliklinik'); ?>">Data Poliklinik</a></li>
-                      <li><a href="<?=base_url('index.php/admin/tampil_spesialis'); ?>">Data Speasialis</a></li>
-                      <li><a href="<?=base_url('index.php/admin/tampil_departemen'); ?>">Data Departemen</a></li>
-                      <li><a href="<?=base_url('index.php/admin/tampil_gedung'); ?>">Data Gedung</a></li>
-                      <li><a href="<?=base_url('index.php/admin/tampil_ruang'); ?>">Data Ruang Rawat Inap</a></li>
+                      <li><a href="<?=base_url('index.php/Staff/tampil_kategori'); ?>">Kategori</a></li>
+                      <li><a href="<?=base_url('index.php/Staff/tampil_merk'); ?>">Merk</a></li>
+                      <li><a href="<?=base_url('index.php/Staff/tampil_pj'); ?>">Penanggung Jawab</a></li>
+                      <li><a href="<?=base_url('index.php/Staff/tampil_inventory'); ?>">Inventory</a></li>
                     </ul>
                   </li>
                 </ul>  
@@ -86,8 +81,6 @@
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="<?php echo base_url()."index.php/Login/logout"?>""><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
                   </ul>
                 </li>
               </ul>

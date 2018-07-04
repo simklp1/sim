@@ -185,27 +185,27 @@ class admin extends CI_Controller {
     }
 
     public function tambah_aksi_jabatan(){
-        $id        = $this->input->post('id');
-        $jabatan   = $this->input->post('jabatan');
+        $id_jabatan        = $this->input->post('id_jabatan');
+        $jabatan           = $this->input->post('jabatan');
             $data = array(
-                'id'            => $id,
+                'id_jabatan'      => $id_jabatan,
                 'jabatan'         => $jabatan
         );
         $where=array(
-            'id' => $id);
+            'id_jabatan' => $id_jabatan);
 
         $this->m_admin->input_data($data,'jabatan');
         redirect ('Admin/tampil_jabatan');
     }
 
-    public function hapus_data_jabatan($id){
-        $where = array('id' => $id);
+    public function hapus_data_jabatan($id_jabatan){
+        $where = array('id_jabatan' => $id_jabatan);
         $this->m_admin->hapus_data($where,'jabatan');
         redirect('admin/tampil_jabatan');
     }
 
-    function edit_data_jabatan($id){ 
-        $where = array('id' => $id);
+    function edit_data_jabatan($id_jabatan){ 
+        $where = array('id_jabatan' => $id_jabatan);
         $this->load->view('admin/header');
         $data['jabatan'] = $this->m_admin->edit_data($where,'jabatan')->result();
         $this->load->view('admin/edit_datajabatan',$data);
@@ -213,15 +213,15 @@ class admin extends CI_Controller {
     }
 
     function update_data_jabatan(){
-        $id        = $this->input->post('id');
-        $jabatan   = $this->input->post('jabatan');
+        $id_jabatan        = $this->input->post('id_jabatan');
+        $jabatan           = $this->input->post('jabatan');
                 $data = array(
-                    'id'         => $id,
+                    'id_jabatan' => $id_jabatan,
                     'jabatan'    => $jabatan
                 );
 
         $where=array(
-            'id' => $id);
+            'id_jabatan' => $id_jabatan);
 
         $this->m_admin->update_data($where,$data,'jabatan');
         redirect('Admin/tampil_jabatan');

@@ -21,7 +21,7 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Jabatan <span class="required">*</span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="hidden" name="id" value="<?php echo $j->id ?>">
+                    <input type="hidden" name="id_jabatan" value="<?php echo $j->id_jabatan ?>">
                     <input type="text" required="required" name="jabatan" class="form-control col-md-7 col-xs-12" value="<?php echo $j->jabatan ?>">
                   </div>
                 </div>
