@@ -512,5 +512,11 @@ class admin extends CI_Controller {
         redirect('Admin/tampil_ruang');
     }
 
+     function tampil_rekamedis(){
+        $this->load->view('admin/header');
+        $data['pasien']=$this->m_admin->tampil_data('pasien');
+        $this->load->view('admin/v_rekamedis',$data);
+        $this->load->view('admin/footer');
+    }
 }
 ?>
