@@ -45,7 +45,7 @@ class Login extends CI_Controller {
                 else if ($a->hak_akses == 'staff')
                     redirect('Staff/tampil_kategori');
                 else
-                    redirect('Keuangan/tampil_pegawai');
+                    redirect('Keuangan/');
             }
 
         else
