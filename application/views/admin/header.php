@@ -63,9 +63,9 @@
                       <li><a href="<?=base_url('index.php/admin/tampil_spesialis'); ?>">Data Speasialis</a></li>
                       <li><a href="<?=base_url('index.php/admin/tampil_departemen'); ?>">Data Departemen</a></li>
                       <li><a href="<?=base_url('index.php/admin/tampil_gedung'); ?>">Data Gedung</a></li>
-                      <li><a href="<?=base_url('index.php/admin/tampil_ruang'); ?>">Data Ruang Rawat Inap</a></li>
-                    </ul>
+                      <li><a href="<?=base_url('index.php/admin/tampil_ruang'); ?>">Data Ruang Rawat Inap</a></li></ul>
                   </li>
+                   <li ><a href="<?php echo base_url()."index.php/admin/tampil_rekamedis"?>"><i class="fa fa-home"></i>Data Rekam Medik</span></a></li>
                 </ul>  
               </div>
             </div>
